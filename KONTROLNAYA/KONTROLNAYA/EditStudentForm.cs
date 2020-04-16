@@ -65,7 +65,7 @@ namespace KONTROLNAYA
             stt.middlename=textBox3.Text;
             var q = (from g in db.s_in_group
                          where g.id_group == int.Parse(comboBox1.SelectedItem.ToString())
-                         select g.id_group).ToList();
+                         select g.group_num).ToList();
             st.id_group = q[0];
             ((FormStud)Owner).studList = ((FormStud)Owner).db.s_students.OrderBy(o => o.id).ToList();
             foreach (var stud in db.s_students.Where(w => w.id == st.id))

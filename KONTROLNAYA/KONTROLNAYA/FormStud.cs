@@ -48,19 +48,18 @@ namespace KONTROLNAYA
                      select new { stud.id, stud.surname, stud.name, stud.middlename, gr.kurs_num, gr.group_num }).ToList();
             if (textBox1.Text != "" || textBox2.Text != "" || textBox3.Text != "")
             {
-                if (textBox1.Text != "")
+                if (textBox1.Text != "" && textBox2.Text=="" && textBox3.Text=="")
                 {
                     dataGridView1.DataSource = q.Where(p => p.surname == textBox1.Text.ToString());
+                }
+                if (textBox2.Text != "" && textBox1.Text == "" && textBox3.Text == "")
+                {
+                    dataGridView1.DataSource = q.Where(p => p.surname == textBox2.Text.ToString());
 
                 }
-                if (textBox2.Text != "")
+                if (textBox3.Text != "" && textBox1.Text == "" && textBox2.Text == "")
                 {
-                    dataGridView1.DataSource = q.Where(p => p.surname == textBox1.Text.ToString());
-
-                }
-                if (textBox3.Text != "")
-                {
-                    dataGridView1.DataSource = q.Where(p => p.surname == textBox1.Text.ToString());
+                    dataGridView1.DataSource = q.Where(p => p.surname == textBox3.Text.ToString());
                 }
             }
             else MessageBox.Show("Выберите хотя бы одно поле для поиска");
@@ -94,6 +93,11 @@ namespace KONTROLNAYA
                 }
             }
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
