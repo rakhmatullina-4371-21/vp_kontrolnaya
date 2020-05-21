@@ -19,12 +19,12 @@ namespace KONTROLNAYA_2
         }
         public Form1(list_of_postcards p)
         {
-            this.postcard = p;
-            textBox1.Text = p.name_sender;
-            textBox2.Text = p.name_recipient;
-            textBox4.Text = p.adress;
-            textBox3.Text = p.text;
             InitializeComponent();
+            this.postcard = p;
+            this.textBox1.Text = postcard.name_sender;
+             this.textBox2.Text = postcard.name_recipient;
+             this.textBox4.Text = postcard.adress;
+            this.textBox3.Text = postcard.text;
         }
 
 
@@ -57,7 +57,6 @@ namespace KONTROLNAYA_2
                     try
                     {
                          postcard = list_of_postcards.postcardss(textBox1.Text, textBox2.Text, textBox4.Text, textBox3.Text);
-                        MessageBox.Show($"{postcard.name_sender}    {postcard.name_recipient}    {postcard.adress}");
                         Image image=null;
                         if (radioButton1.Checked)
                         {
