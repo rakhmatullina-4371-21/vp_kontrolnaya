@@ -32,6 +32,8 @@ namespace KONTROLNAYA_2
                 label3.Text = $"Открытка  отправлена адресату {postcards.name_recipient} \r\n по адресу  {postcards.adress}";
                 button1.Visible = false;
                 button1.Visible = false;
+                Form3 f = new Form3();
+                f.Show();
             }
             catch { MessageBox.Show("Ошибка"); }
         }
