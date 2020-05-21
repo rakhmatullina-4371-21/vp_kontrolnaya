@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PostcardListModelContainer" CdmEntityContainer="PostcardListEntities">
+    <EntitySetMapping Name="list_of_postcards">
+      <EntityTypeMapping TypeName="PostcardListModel.list_of_postcards">
+        <MappingFragment StoreEntitySet="list_of_postcards">
+          <ScalarProperty Name="id_postcards" ColumnName="id_postcards" />
+          <ScalarProperty Name="name_sender" ColumnName="name_sender" />
+          <ScalarProperty Name="name_recipient" ColumnName="name_recipient" />
+          <ScalarProperty Name="adress" ColumnName="adress" />
+          <ScalarProperty Name="text" ColumnName="text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

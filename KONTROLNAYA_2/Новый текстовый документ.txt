@@ -1,0 +1,9 @@
+CREATE DATABASE PostcardList;
+CREATE TABLE list_of_postcards
+(
+	id_postcards SERIAL PRIMARY KEY,
+	name_sender TEXT NOT NULL,
+	name_recipient TEXT NOT NULL,
+    adress  text NOT NULL,
+    text TEXT 
+);
